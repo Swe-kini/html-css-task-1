@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+                
+            </ul>
+        </nav>
+        <div class="header-text">
+            <h1>Hello, <br>I am Swetha Benny</h1>
+            <p>Electronics and Communication undergraduate</p>
+        </div>
+    </div>
+</div> 
+<!---------------about------------->
+<div id="about">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/about1.png">
+
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>Organized and motivated student who is able to apply time management and organizational
+                skills in various environments and seeking an opportunity to utilize my skills and abilities in an
+                organization that offers professional growth and at the same time helps me to be resourceful.</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('Education')">Education</p>
+                <p class="tab-links" onclick="opentab('Certifiaction')">Certifications</p>
+            </div>  
+            <div class="tab-contents active-tab" id="Experience">
+                <ul>
+                    <li><span>Chief Technical Officer</span><br>-IEDC Parallel Execom</li>
+                    <li><span>Intership Student</span><br>-Techmagi </li>
+                    <li><span>Campus Ambassador</span><br>-RITU'23</li>
+                    <li><span>NSS Volunteer</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Education">
+                <ul>
+                    <li><span>High School</span><br>Fr.GKM HSS, kaniyaram</li>
+                    <li><span>Higher Secondary</span><br>Sacred Heart Higher Secondary School</li>
+                    <li><span>Bachelors Degree</span><br><P>RIT, Kottayam</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="Certifiaction">
+                <ul>
+                    <li><span>The Joy of Computing Using Python</span><br>-NPTEL</li>
+                    <li><span>Crash course on python</span><br>-COURSERA</li>
+                    
+                </ul>
+            </div>
+        </div>  
+      </div>
+
+</div> 
+<!---------------contact------------->
+<div id="skills">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/skill.jpg">
+        </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">Skills</h1>
+                <div class="tab-skill">
+                        <ul>
+                            <li><span>Programming </span><br>Python | C | HTML | CSS </li>
+                            <li><span>Embedded System </span><br>Raspberry Pi, Arduino </li>
+                            <li><span>Soft skill</span><br>Team work, Communication, Problem solving, Time management,Leadership, Prioritisation</li>
+                        </ul>
+                    </div>
+            </div>    
+    </div>
+</div>
+<!---------------project------------->
+<div id="project">
+    <div class="row">
+        <div class="about-col-1">
+            <img src="images/setup.png">
+
+        </div>
+        <div class="about-col-2">
+            <h1 class="sub-title">Project</h1>
+            <p>The Crop Protection System is an innovative project that utilizes computer vision and
+                IoT technologies to detect and identify specific animals in real-time. The project is
+                implemented on a Raspberry Pi, making it a cost-effective and accessible solution for animal
+                detection and monitoring.<br>The system leverages a camera connected to the Raspberry Pi to capture live video
+                footage. Through the integration of computer vision algorithms and a pre-trained deep learning
+                model, the system can identify specific animals, such as elephants and cows in the captured
+                video stream. To enhance the usability and effectiveness of the system, additional features have
+                been incorporated. When an animal of interest is detected, the system plays a deterrent sound
+                to discourage the animal's presence. Furthermore, an SMS notification is sent using the Twilio
+                service, providing real-time alerts to the user about the detected animal. The project also
+                integrates a PIR (Passive Infrared) sensor, which enables the system to operate selectively
+                based on motion detection. By utilizing the PIR sensor, the camera is activated only when
+                motion is detected, conserving power and reducing unnecessary video processing.<br>The Crop Protection System offers several advantages, including its versatility, low-
+                cost implementation, and potential for various applications. It can be deployed in wildlife
+                conservation, agricultural settings, or even for home security purposes to detect and monitor
+                specific animal species.</p>
+        </div>
+    </div>    
+
+</div>
+
+<!---------------contact------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>swethaben01@gmail.com</p>
+                <p>******1918</p>
+                <div class="social-icons">
+
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab");
+
+    }
+</script>
+</body>
+</html>
